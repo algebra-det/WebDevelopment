@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Primitive</title>
+</head>
+
+<body>
+    <h1>Primitive data type</h1>
+    <p>these are IMMUTABLE</p>
+    <p>means you can't change the value of immutable objects</p>
+
+    <script>
+        let age = 24; // Declare Variable age with value 24
+
+        age = 32; // as it's same as previous variable, it will create a new variable location
+
+        age = "Hello" + "World"; // Concatinate String
+
+        const inf = Infinity;
+
+        const ninf = -Infinity;
+
+        const nan = NaN; // Not A Number
+
+        console.log(age);
+        console.log(inf, ninf, nan)
+
+        //BOOLEAN TYPES
+        let Do = true;
+
+        let More = false;
+        
+        
+        //SYMBOLS
+        
+        const blue = Symbol();
+        
+        const white = Symbol("Color White");
+        
+        blue==white     // get false
+        
+        
+        // Null And Undefined
+        /*
+        1. JavaScript has two special types null and undefined.
+        2. Now has only one possible value which is Null and undefined has only one possible value undefined.
+        3. Both null and undefined Represent something that doesn't exist.
+        */
+        
+        let Myvalue;
+        
+        console.log(Myvalue)
+        
+        let MyNullvalue = null;
+        
+        console.log(MyNullvalue)
+        
+        MyNullvalue = 19.4;
+        
+        console.log(MyNullvalue)
+        
+        MyNullvalue = undefined;
+        
+        console.log(MyNullvalue)
+    </script>
+
+
+
+</body>
+
+</html>

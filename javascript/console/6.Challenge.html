@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge of dispearing circles</title>
+    
+    <style type="text/css">
+    
+        .circle {
+            
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            float: left;
+            margin: 50px;
+        }
+        
+        #red_circles {
+            
+            background-color: red;
+        }
+    
+        #lightblue_circles {
+            
+            background-color: lightblue;
+        }
+        
+        #grey_circles {
+            
+            background-color: grey;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Disappearing Circles</h1>
+    
+    <div class="circle" id="red_circles"></div>
+    
+    <div class="circle" id="lightblue_circles"></div>
+    
+    <div class="circle" id="grey_circles"></div>
+    
+    
+    <script type="text/javascript">
+        
+        document.getElementById("red_circles").onclick = function() {
+            document.getElementById("red_circles").style.display = "none";
+        }
+        
+        document.getElementById("lightblue_circles").onclick = function() {
+            document.getElementById("lightblue_circles").style.display = "none";
+        }
+        
+        document.getElementById("grey_circles").onclick = function() {
+            document.getElementById("grey_circles").style.display = "none";
+        }
+    
+    </script>
+    
+</body>
+</html>

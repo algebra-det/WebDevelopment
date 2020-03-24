@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Types</title>
+</head>
+<body>
+    
+    <h1>WHat is Object</h1>
+    <ul>
+        <li>Objects are mutable</li>
+        <li>Can change any value anytime.</li>
+        <li>Objects is just like a conatiner that can have different kind of data.</li>
+        <li>Object literal syntax : {}</li>
+    </ul>
+    
+    <h2>Arrays</h2>
+    <ul>
+        
+        <li>Array is collection of different types of data</li>
+        <li>Array start with [0] and ends with [n]</li>
+        <li>Array elements can be any type of data. It may be objects or primitive type.</li>
+        <li>Array size is not fix so you can add and remove array element anytime.</li>
+        <li>Array is zero based, So the first element of the array is zero the next element is 1 and so on.</li>
+    </ul>
+    
+    <h3>Date</h3>
+    <ul>
+        <li>So dates are represent the date and time using data object.</li>
+        <li>Date object used to get date or you can use to set date for a particular event.</li>
+        <li>You can also specify time using date of object.</li>
+    </ul>
+    
+    <h4>Regular Expression</h4>
+    <ul>
+        <li>Regular expression is sub language of JavaScript.</li>
+        <li>It is used to Perform complex search and replace operations on strings.</li>
+        <li>Once you create a symbol it is unique and it will not match any other symbols.</li>
+    </ul>
+    
+    <h5>Maps and Sets</h5>
+    <ul>
+        <li>In new ECMAScript6 a new data type introduced is map and set And their week counterpart, WeakMap and WeakSet.</li>
+        <li>Maps are just like an object but it Offers more advantages then object in certain situations..</li>
+        <li>Set are similar to aray except they Can't content duplicate element.</li>
+    </ul>
+    
+    <script>
+    
+        const obj = {}; // create empty objects , OR add properties to this object
+        
+        obj.age = 24;   // property with value
+        
+        console.log(obj.age)
+    
+        obj.age; //property with undefined value
+        
+        console.log(obj.age)
+        
+        
+        const newobj = {
+            
+            name:"Sandi",   //key = name, value= "Sandi"
+            age:25          // key = age, value = 24
+                        
+            
+        }; // object with properties
+        
+        console.log("newobj.namae is : ",newobj.name)
+        console.log("newobj.age is : ",newobj.age)
+        
+        // TO DELETE A PROPERTY
+        
+        delete newobj.age;
+        console.log(newobj.age)
+        
+        
+        
+        
+        // ARRAY
+        const a1=[1,2,3,4,5];
+        const a2=['hello','world','array'];
+        const a3=[1,2,null,4,"Hello world"];
+        
+        //have an array containing array
+        const a4=[
+            [1,2,3],
+            [4,5,6]
+        ];
+        
+        console.log("length of array 1 is : ",a1.length)
+        console.log("first element of array 2 is : ",a2[0])
+        console.log("Third element of array 4 is : ",a4[2])
+        
+        // To change the array elements
+        a1[0]="Welcome"
+        console.log(a1)
+        
+        
+        
+        // DATE
+        const now=new Date();
+        
+        console.log(now);
+        
+        const dt = new Date(2018,9,13); // Displaying date as on 2018, 9(month),13(date)
+        console.log(dt)
+        
+        dt = new Date(2018,9,13,0); // Displaying date as on 2018, 9(month),13(date)
+        console.log(dt)
+        
+        
+        // MAP
+        const roles = new Map();
+        
+        // assign role to the user
+        roles.set(t1,"User1");
+        roles.set(t2,"User2)");
+        
+        
+        
+        // SET
+        const role = new Set();
+        
+        // Specify role to the user
+        role.add("User1");
+        
+        
+    </script>
+    
+    
+    
+</body>
+</html>

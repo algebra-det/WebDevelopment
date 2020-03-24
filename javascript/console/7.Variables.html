@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Variables</title>
+</head>
+
+<body>
+
+    <input type="text" id="textinput">
+    <button id="changeButton">Click to Change</button>
+    <p id="paratext">this will be changed on the click of the below button after entering some text in the above Field</p>
+
+    <script type="text/javascript">
+        
+        var x = 5;
+        alert(x); 
+        // if we put it in quotes than it will take string x as argument
+
+        x = 30
+        alert(x);
+
+        x = "Akash";
+        alert(x);
+
+        document.getElementById("changeButton").onclick = function() {
+
+            var TextEntered = "";
+            
+            TextEntered = document.getElementById("textinput").value;
+
+            document.getElementById("paratext").innerHTML = TextEntered;
+        }
+        
+    </script>
+
+
+</body>
+
+</html>
