@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Changing website content</title>
+    <style type="text/css">
+        
+        #ithink {
+            
+            display: inline;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <p id="text">Hello World!</p>
+    <button id="myButton">Change text</button>    // for changing
+    
+    <p id="secondpara">Javascript is ... </p>
+    <button id="secondButton">Click Me To Find Out</button>    // for appending
+    <br>
+    
+    <p id="thirdpara">Javascript is ... </p>
+    <button id="thirdButton">Click Me To Find Out</button>    // for appending front and back
+    
+    <p id="emptypara"></p>
+    <button id="createButton">Create paragraph</button>    // for creating something in paragraph
+    
+    <script type="text/javascript">
+    
+        // for changing in Hello World !
+        document.getElementById("myButton").onclick = function() {
+            
+            document.getElementById("text").innerHTML = "Hello Akash!"
+        }
+        
+        // for appending in javascript is ...
+        document.getElementById("secondButton").onclick = function() {
+            
+            document.getElementById("secondpara").innerHTML = document.getElementById("secondpara").innerHTML + "awesome";  // appending the text paragraph instead of rewriting
+        }
+        
+        // for appending in I think javascript is ... awesome
+        document.getElementById("thirdButton").onclick = function() {
+            
+            // we can also pass html syntaxes
+            document.getElementById("thirdpara").innerHTML = "<h1 id='ithink'>I think</h1> " + document.getElementById("thirdpara").innerHTML + "<h1 id='ithink'>awesome</h1>";  // appending the text paragraph instead of rewriting
+        }
+        
+        // for creating/displaying something out of nothing in an empty paragraph
+        document.getElementById("createButton").onclick = function() {
+            
+            document.getElementById("emptypara").innerHTML = "<h1>So We have a paragraph here now !</h1>"
+        }
+    
+        
+    </script>
+    
+</body>
+</html>

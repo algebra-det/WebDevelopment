@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responding to a click</title>
+</head>
+<body>
+    
+    <p id="text">Hello Wrold !</p>
+    
+    <button id="myButton">Change Text</button>
+    <br>
+    <p id="secondtext">Second Button</p>
+    <button id="secondButton">Click Me</button>
+    
+    <script type="text/javascript">
+    
+        document.getElementById("myButton").onclick = function() {
+            // calling a function on click of the button
+        
+        // function can also get parameters
+        
+            alert("Button Clicked");
+            
+        }    
+        
+        document.getElementById("secondButton").onclick = function() {
+            
+            document.getElementById("secondtext").innerHTML = "Second Button Clicked!";
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

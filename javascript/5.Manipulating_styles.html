@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulating Styles</title>
+    
+</head>
+<body>
+    
+    
+    <p id="moreText">This is some text</p>
+    <button id="styletext">Style text</button>    
+    // to use css style via javascript
+    
+    <p id="somemoreText">This is some more text</p>
+    <button id="morestyletext">Style text to none</button>     
+    // to make the text disappear
+    
+    <script type="text/javascript">
+    
+        document.getElementById("styletext").onclick = function() {
+            
+            // using .style.(attribute) to have add css styles to the html code
+            document.getElementById("moreText").style.color = "red";
+            document.getElementById("moreText").style.fontSize = "50px";
+            
+        }
+    
+        document.getElementById("morestyletext").onclick = function() {
+            
+            // to make the text disappear , use display none
+            document.getElementById("somemoreText").style.display = "none";
+        }
+        
+    </script>
+    
+</body>
+</html>
