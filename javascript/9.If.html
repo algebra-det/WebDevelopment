@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>If Statement</title>
+</head>
+
+<body>
+
+    <p>What is the magic word</p>
+
+    <p><input type="text" id="word"></p>
+
+    <button id="gettingword">Click To Submit</button>
+
+
+
+    <script type="text/javascript">
+        var x = 1;
+
+        if (x == 1) {
+
+            console.log("It's one");
+
+        } else {
+
+            console.log("It's not one");
+
+        }
+
+
+        // Making a If statement to get a word from the user and then check it
+        document.getElementById("gettingword").onclick = function() {
+
+            var magicword = "hero";
+
+            var userword = "";
+
+            userword = document.getElementById("word").value;
+
+
+            if (userword == magicword) {
+
+                alert("Hey ! You got it right man");
+
+            } else {
+
+                alert("Oops ! That was wrong");
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

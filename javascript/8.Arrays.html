@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+
+<body>
+
+    <h>Arrays :</h>
+    <ul>
+        <li>To create array : new Array() OR [] <br>For example: new tweets = new Array <br>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;new tweets = []</li>
+        <br>
+        <li>To append array : array_name.push("data") <br>For example: tweets.push("Back To Work!") <br>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;tweets.push("I love Coffee!")</li>
+        <br>
+        <li>To delete, rename or add_at_index : array_name.splice('data')
+            <ul>
+                <li>To delete : array_name.splice("index", "number_of_elements")<br>For example: tweets.splice(1,2)</li>
+                <br>
+                <li>To append after a certain index : array_name.splice("index", 0, "data")<br>For example: tweets.splice(1, 0, "Good Morning")</li>
+                <br>
+                <li>To change data at certain index : array_name.splice("index", 1, "change_data")<br>For example: tweets.splice(1, 1, "Pack Your Lunch!")</li>
+            </ul>
+
+        </li>
+    </ul>
+
+
+    <h1>Note:</h1>
+    <ol>
+        <li><strong>If there is only two arguments in splice:</strong>means Delete</li>
+        <li><strong>If there are three arguments in splice:</strong>
+
+            <ul>
+                <li><strong>Second argument is 0:</strong> means Appending</li>
+                <li><strong>Second argument is 1:</strong> means Changing the Data</li>
+            </ul>
+
+        </li>
+        <li><strong>If there are four arguments in splice:</strong>means Changing/Deleting and then appending<br>For example: tweets.splice(1, 1, "Changing_the_data_at_1", "New_data_appended_after_that")</li>
+    </ol>
+
+    <script type="text/javascript">
+        var myArray = new Array(); // OR var myArray = [];
+
+        myArray[0] = "pizza";
+
+        myArray[1] = "chocolate";
+
+        var tweets = ["Morning Everybody!", "I love Coffee!", "Pack Your lunch"];
+
+        console.log("myArray is : ", myArray);
+        console.log("myArray's length is : ", myArray.length);
+        console.log("tweets is : ", tweets)
+        console.log("second element of tweets is : ", tweets[1])
+
+        // To add an item to the array
+        tweets.push("Back to Work!")
+        console.log("Now the tweets array is : ", tweets)
+
+        // To delete an item from the array
+        tweets.splice(1, 1);
+        /* Above :
+        First 1 denotes that to start from the index 1
+        Second 1 denotes that to delete 1 item 
+        Hence, delete 1 item starting with index 1
+        */
+        console.log("Now after deleting the index[1] from the tweets , its now", tweets)
+
+        tweets.splice(1, 2)
+        console.log("tweets after deleting two items from index 1", tweets)
+
+        // To add an element by using slice keyword
+        tweets.splice(1, 0, "Cornflakes for breakfast!")
+        console.log("after adding one more by slice in tweets : ", tweets)
+
+        tweets.splice(1, 1, "I Love Coffee")
+        console.log("after changing index[1] in tweets : ", tweets)
+
+        tweets.splice(1, 1, "Sale at Supermarket!", "Num Num!")
+        console.log("after changing index[1] and then appending in tweets : ", tweets)
+    </script>
+
+
+</body>
+
+</html>

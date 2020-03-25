@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>How Many Fingers</title>
+</head>
+
+<body>
+
+    <h1>How many fingers am I holding?</h1>
+    <input type="text" id="number">
+    <button id="gettingnumber">Submit</button>
+    <p id="printing"></p>
+
+    <script type="text/javascript">
+        var mynumber = Math.floor(Math.random() * 6);
+        var usernumber = "";
+
+        document.getElementById("gettingnumber").onclick = function() {
+
+            usernumber = document.getElementById("number").value;
+
+            if (mynumber == usernumber) {
+
+                document.getElementById("printing").innerHTML = "Hey! You got that right";
+
+            } else {
+
+                document.getElementById("printing").innerHTML = "Oops! That was wrong Bro";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

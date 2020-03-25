@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>While - How many fingers</title>
+</head>
+
+<body>
+
+    <h><b>How Many Fingers Using While Loop:</b></h>
+    <p>Enter any number between 0 and 5: </p>
+    <p><input type="text" id="input">
+        <button id="gettinginput">Submit</button>
+    </p>
+
+    <div id="displaying"></div>
+
+    <script type="text/javascript">
+        document.getElementById("gettinginput").onclick = function() {
+
+            var userinput = document.getElementById("input").value;
+
+            if (userinput < 6) {
+
+                var gotIt = false;
+
+                var numberOfGuesses = 1;
+
+                while (gotIt == false) {
+
+                    var guess = Math.floor(Math.random() * 6);
+
+                    if (guess == userinput) {
+
+                        gotIt = true;
+                        alert("Got it!" + guess + ", It took me " + numberOfGuesses + "guesse")
+
+                    } else {
+
+                        numberOfGuesses++
+                    }
+
+                }
+
+
+            } else {
+
+                alert("The number should be between 0 to 5")
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

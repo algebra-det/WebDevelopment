@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>While Loop</title>
+</head>
+<body>
+   
+   <h style="font-size: 200%"><b>While Loops :</b></h>
+   <div id="tweetpara"></div>
+    
+    <script type="text/javascript">
+    
+        var tweetString = "";
+        
+        var tweets = ["Hi everyone!", "I love cornflakes", "Night Night :)"];
+        
+        var i = 0;  // we have to define the counter variable first
+        
+        while (i < tweets.length) {
+            
+            tweetString = tweetString + "<p>" + tweets[i] + "</p>";
+            
+            i++;
+            
+        }
+        
+        document.getElementById("tweetpara").innerHTML = tweetString;
+    
+    </script>
+    
+</body>
+</html>

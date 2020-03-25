@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loops Statements</title>
+</head>
+
+<body>
+
+    <h>For Loop</h>
+    <div id="divisions"></div>
+
+    <script type="text/javascript">
+        /*
+        for (var i = 0; i < 5; i++) {
+            
+            alert(i);
+        }
+        
+        for (var i = 5; i > 0; i--) {
+            
+            alert(i);
+        }
+        */
+
+        // Never leave a string variable empty otherwise it will be used for undefined  =   var currentstring; , we should use = "";
+
+        var currentstring = ""; // now it's not undefined, it's an empty string
+        var arr = ["Hi everyone!", "I love cornflakes!", "Night Night :)"];
+
+        for (i = 0; i < arr.length; i++) {
+
+            currentstring = currentstring + "<p>" + arr[i] + "</p>";
+
+            document.getElementById("divisions").innerHTML = currentstring;
+        }
+    </script>
+
+
+</body>
+
+</html>
