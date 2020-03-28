@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Changing Website Content</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="jquery.min.js"></script>
+  <style type="text/css">
+    .circle {
+
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      margin: 10px;
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body style="font-family: Georgia">
+
+  <div class="circle"></div>
+  <p>This is some text.</p>
+  <iframe src=http://www.completewebdevelopercourse.com/content/4-jquery/4.3.html"></iframe>
+
+  <script type="text/javascript">
+    /*
+    // We invoke JQuery by using "$" symbol
+    $(".circle").click(function() {
+
+      // Look how we can change in jquery, we use html instead of .innerHTML
+      // here we changed the "p" tag when the circle is clicked
+      $("p").html("This text has changed!");
+
+    })
+
+    //AND
+    $(".circle").hover(function() {
+
+      // To get the element of the p and alert the text
+      alert($("p").html())
+
+    })
+*/
+
+    $(".circle").hover(function() {
+
+      //here you can see that we are using .attr which is basically used to change
+      //of obtain any attribute of the tag, for example we are changing the "src" of iframe
+      $("iframe").attr("src", "http://www.codestars.com")
+
+    })
+  </script>
+
+
+</body>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Changing Website Styles</title>
+  <script src="jquery.min.js"></script>
+  <style type="text/css">
+    #circle {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      background-color: green;
+      margin: 10px;
+    }
+
+    .square {
+      height: 200px;
+      width: 200px;
+      background-color: red;
+      margin: 10px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <div id="circle"></div>
+  <div class="square"></div>
+  <div class="square" style="background-color: blue"></div>
+
+  <h1>Here we will see :</h1>
+  <ul>
+    <li><strong>Change the css attributes via jquery:</strong>i.e. by using .css("attribute", "value")</li>
+    <li><strong>Use "this" in $(this):</strong>i.e. to make changes to the current selected element of the class </li>
+    <p>As there can by many elements with the same class and if we use class_name instead of "this"
+      than the changes will be implemented for all the elements of the same class name</p>
+  </ul>
+
+  <p style="font-size: 150%"><strong>Note:</strong> <span style="font-size: 80%">if you want to change the attributes of
+  an html tag like iframe,h,p,etc than we use $("class/id").attr("attribute_name", "new_value") & if we want to change the attributes
+  of the css content regarding the html tag than we use $("class/id").css("attribute_name", "new_value")</span> </p>
+
+  <script type="text/javascript">
+    $("#circle").click(function() {
+
+      // To change the value of a css attribute
+      $("#circle").css("border-radius", "0%");
+
+      // To get and alert the value of a css attribute
+      alert($("#circle").css("width"));
+
+    });
+
+
+    // The use of "this"
+    $(".square").click(function() {
+
+      // This will set dispaly none for all square so that both the square will disappear
+      //$(".square").css("display", "none")
+
+      //To counter this problem we use $("this") , which will set the change to the used element
+      $(this).css("display", "none")
+
+      // You can also get the attributes of the "this" element in use
+      alert("You clicked on a " + $(this).attr("class"))
+    })
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Animated Content</title>
+  <script type="text/javascript" src="jquery.min.js"></script>
+
+  <style>
+    .circle {
+
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      background-color: lightblue;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="circle">This is a circle</div>
+
+  <script type="text/javascript">
+    $(".circle").click(function() {
+
+      // We have to use {} as an array to assign every property, as if we want to assign two things
+      // like widht and height we use {width:"400px", height:"400px"}, 2000 is the miliseconds for the animation
+      $(this).animate({
+        width: "400px",
+        height: "400px",
+        fontSize: "300%",
+        marginLeft: "100px",
+        marginTop: "100px"
+      }, 2000, function() {
+
+          // We are using this function to change the color after the animation that's why we made a function
+          // after the declaration of miliseconds
+          $(this).css("background-color","rgb(196, 87, 87)");
+
+
+      });
+
+    });
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="jquery.min.js"></script>
+  <title>Regualr Expression</title>
+</head>
+
+<body>
+
+  <h1>Regualar Expressions</h1>
+  <p>These are just a way to check the format or the content of a string.</p>
+  <p>For example, if it has a number in it, or a data, or an email address, etc.s</p>
+
+  <script type="text/javascript">
+    // we use regular expressions by /(thing_to_check)/ i.e. entering the thing to check between //
+    var regex = /is/;
+
+    var string = "Regex is great!";
+
+    var result = string.match(regex);
+    // match the string according to the regex variable
+    // in other words check if the "is" is present in "Regex is great"
+
+    alert(result);
+    // if "is" is present in "regex is great!" than it will return "is" , and if it's not present
+    // than it will return "null"
+
+
+    // To have a Case insensetive checking, we have to define "/()/i" i.e. "i" at the end of regular expression
+    // here "i" means insensetive flag
+    var tocheck = /Hero/i;
+
+    var checkin = "He is not a hErO!";
+
+    var checked = checkin.match(tocheck)
+
+    alert(checked)
+
+
+    // To check with also knowing how many times something appeared we use "g" at the end of RE
+    // here "g" means global flag
+    var to = /e/g;
+
+    var from = "He is a hero but only in dreams!";
+
+    var final = from.match(to);
+
+    alert(final)
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>AJAX</title>
+  <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+
+<body>
+
+  <h>Ajax:</h>
+  <p>It can not be used locally without an internet connection like jquery</p>
+  <p>It can be used just like the jquery animation in which when the user clicks,</p>
+  <p>some data is sent to the server and then something happens/done without the user being </p>
+  <p>redirected to another page. FOR EXAMPLE, when we compose an email and then hit send</p>
+  <p>Then the data is sent to the email server , after successful completion, it displays "send"</p>
+  <p>on the same page the user is in i.e. gmail</p>
+  <div class="circle">This is a circle</div>
+
+  <script type="text/javascript">
+
+    // the "data" variable/parameter will contain the data of the info.txt file which we got through $.get()
+    $.get("info.txt", function(data) {
+
+        alert(data);
+
+    })
+
+    /*Think what if there is no info.txt file or the user's device catch bad internet speed
+      THAN it will not load the info.txt file, hence nothing will work,
+      that's where we will use $.ajax */
+
+  </script>
+
+
+</body>
+
+</html>

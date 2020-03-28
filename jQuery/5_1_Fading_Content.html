@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fading Content</title>
+  <script src="jquery.min.js"></script>
+</head>
+
+<body>
+
+  <p id="firstpara">This is some text. Click the button to FadeOut :</p>
+  <button id="firstbutton">Fade Out Test</button>
+
+  <p id="anotherpara" style="display:none">It came out of nowhere</p>
+  <button id="secondbutton" style="display:block">Magically Appear</button>
+
+  <p id="thirdpara">This text can be toggled : fadeIn or fadeOut</p>
+  <button id="thirdbutton" style="display:block">FadeIn/FadeOut</button>
+
+  <p id="fourthpara">This same text as above can be toggled : fadeIn or fadeOut</p>
+  <button id="fourthbutton" style="display:block">FadeIn/FadeOut</button>
+
+  <script type="text/javascript">
+    // for firstpara , where we just do fadeOut
+    $("#firstbutton").click(function() {
+
+      $("#firstpara").fadeOut();
+
+    });
+
+    // for secondpara, where we do fadeIn
+    $("#secondbutton").click(function() {
+
+      $("#anotherpara").fadeIn();
+
+    });
+
+    // for thirdpara where we toggle i.e. fadeIn/fadeOut
+    $("#thirdbutton").click(function() {
+
+      if ($("#thirdpara").css("display") == "block") {
+
+        $("#thirdpara").fadeOut();
+
+      } else {
+
+        $("#thirdpara").fadeIn();
+
+      }
+
+    });
+
+    // AS above just another way
+    // Taking a variable to use as a general boolean
+    var textshowing = true;
+
+    $("#fourthbutton").click(function() {
+
+      if (textshowing) {
+
+        $("#fourthpara").fadeOut(function() {
+
+          textshowing = false;
+
+        });
+
+      } else {
+
+        $("#fourthpara").fadeIn(function() {
+
+          textshowing = true;
+
+        });
+
+      }
+
+    })
+  </script>
+
+
+</body>
+
+</html>

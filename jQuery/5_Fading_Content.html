@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fading Content</title>
+  <script src="jquery.min.js"></script>
+  <style type="text/css">
+    #circle {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      background-color: green;
+      margin: 10px;
+    }
+
+    .square {
+      height: 200px;
+      width: 200px;
+      background-color: red;
+      margin: 10px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <div id="circle"></div>
+  <div class="square"></div>
+  <div class="square" style="background-color: blue"></div>
+
+  <script type="text/javascript">
+    $("#circle").click(function() {
+
+      // Using "fadeOut" to make the element fadeout from the display
+      $(this).fadeOut();
+
+      // We can also use "hide", it does the same thing as "display:none"
+      //$(this).hide();
+
+    })
+
+    // Making some changes to the fadOut thing like speed
+    //check the official documentation for "jquery fadeout" by searching the google
+    $(".square").click(function() {
+
+      // using "slow" in fadeOut , also having a function that will make chages to the slow
+      $(this).fadeOut("slow", function() {
+
+        alert("FadeOut has finished!");
+
+      });
+
+    })
+  </script>
+
+
+</body>
+
+</html>

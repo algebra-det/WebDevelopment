@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>AJAX</title>
+  <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+
+<body>
+
+  <h>Ajax:</h>
+  <p>It can not be used locally without an internet connection like jquery</p>
+  <p>It can be used just like the jquery animation in which when the user clicks,</p>
+  <p>some data is sent to the server and then something happens/done without the user being </p>
+  <p>redirected to another page. FOR EXAMPLE, when we compose an email and then hit send</p>
+  <p>Then the data is sent to the email server , after successful completion, it displays "send"</p>
+  <p>on the same page the user is in i.e. gmail</p>
+
+  <h1 id="data"></h1>
+
+  <script type="text/javascript">
+    // AJAX have a done & fail methods which will come in handy if the required data is not fetched
+    // or if there's any issue regarding the file, for example misspelled or something
+    $.ajax("info.txt").done(function(data) {
+
+      alert(data);
+      // OR
+      $("h1").html(data);
+
+    }).fail(function() {
+
+      alert("Could not get data!");
+      // OR
+      $("h1").html("Could not get data!")
+    });
+  </script>
+
+
+</body>
+
+</html>
