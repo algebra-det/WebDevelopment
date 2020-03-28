@@ -1,0 +1,63 @@
+body {
+  font-family: helvetica, sans-serif;
+  font-size: 130%;
+  background: rgb(25, 36, 70);
+}
+
+
+
+input {
+  padding: 5px 5px 12px 15px;
+  /* Here we used it for the center placeholder/userinput, for the text
+                                      which the user will input, we used four values for left right top bottom */
+  font-size: 25px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  width: 320px;
+}
+
+label {
+  position: relative;
+  top: 12px;
+  /* For adjusting verticalness of label tag texts*/
+  width: 200px;
+  float: left;
+}
+
+#wrapper {
+  /*To center everthing on the page*/
+  width: 550px;
+  margin: 0 auto;
+  /* 0 is for top & bottom , and auto for left and right*/
+  background:#fff;
+  opacity:0.9;
+  padding:2em;
+  border:#ccc 2px solid;
+  position:absolute;
+  float: center;
+  border-radius: 20px;
+
+}
+
+.form-element {
+  margin-bottom: 10px;
+}
+
+#submitbutton {
+  width: 130px;
+  margin-left: 200px;
+}
+
+#errorMessages {
+  color: red;
+  font-size: 80% !important;
+  /* !important overrides any predefined instsructions*/
+}
+
+#success {
+  color: green;
+  font-size: 80% !important;
+  /* !important overrides any predefined instsructions*/
+  display: none;
+  margin-bottom: 20px;
+}
