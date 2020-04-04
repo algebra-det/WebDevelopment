@@ -1,0 +1,29 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+#product-overview {
+    background: #be2a4f;
+    padding: 20px;
+    border: 3px black solid;
+    margin: 20px;
+
+}
+
+.section-title {
+    color: rgb(46, 197, 53);
+    font-family: inherit;
+}
+
+/* Combining things*/
+#product-overview h1 {
+    color: azure;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+h1 {
+    font-family: serif;
+}
+*/

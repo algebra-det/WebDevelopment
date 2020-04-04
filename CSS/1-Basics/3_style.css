@@ -1,0 +1,30 @@
+body {
+    font-family: 'Asul', sans-serif;
+}
+
+
+#product-overview {
+    background: #be2a4f;
+}
+
+h1 {
+    color: azure;
+    font-family: 'Roboto Slab', serif;
+}
+
+.section-title {
+    color: rgb(46, 197, 53);
+}
+
+/*
+h1 {
+    font-family: serif;
+}
+*/
+
+/*
+Inline - highest priority
+Id - high priority
+Class - low priority
+* - lowest priority
+*/

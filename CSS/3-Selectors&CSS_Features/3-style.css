@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    margin-bottom: 16px;
+    background: #fa923f;
+    padding: 8px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+a.active {
+    color: #527751;
+}
+
+/* Use of not() pseudo-elements, this is used to reverse the style of a certain
+    below line says, any anchor tag which do not have an active class */
+a:not(.active) {
+    color: blue;
+}
+
+/* It's more logical to ues the above implementation by : 
+    a.active {
+    color: #527751;
+}
+
+a {
+    color: blue;
+}
+The above code will do the same stuff, as all the anchor link tags will get blue at first,
+and then the anchor with active class_name(a.active) will overwrite stuff that is inherited
+as the a.active have higher specifity
+
+NOTE: it's not supported by every browser, so do check the supported browser listing on the 
+MDN website, or goto : "can I use" website, to check the usability of any css feature in any browser
+    not() is one of the CSS feature that have some usability support by some browsers*/
+
+.main-section {
+    height: 800px;
+    border: 1px solid #ccc !important;
+    padding: 16px;
+}
+
+.highlighted {
+    border: 2px solid #fa923f;
+    height: 200px;
+}

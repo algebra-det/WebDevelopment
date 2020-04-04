@@ -1,0 +1,45 @@
+* {
+    text-decoration: none;
+}
+
+.plans {
+    display: block;
+    padding: 16px;
+    margin: 8px 0;
+    width: 90%;
+    border: 2px solid #0c240a;
+    border-radius: 10x;
+    border-width: 5px;
+    text-align: left;
+}
+
+h1 {
+    color: black;
+}
+
+h2 {
+    color: gray;
+}
+
+p {
+    border: 1.5px solid black;
+    background: white;
+    color: black;
+    padding: 15px;
+}
+
+.plan__plus {
+    background:#b4d4b4;
+}
+
+.plan__free {
+    background: #dbe4db;
+}
+
+.plan__premium {
+    background: #64ce64;
+}
+
+#plans_available {
+    margin-top: 50px;
+}

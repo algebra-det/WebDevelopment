@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    margin-bottom: 16px;
+    background: #fa923f;
+    padding: 8px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+a.active {
+    color: #527751;
+}
+
+/* As the highlighted class has higher specifity, we can overwrite this and 
+   and make this .main-section rule to take action on the content
+   we do this by defining !important*/
+.main-section {
+    height: 800px;
+    border: 1px solid #ccc !important;
+    padding: 16px;
+    /* Still the .highlighted will have higher specifity but as we declared !important
+       You can check this out in the browser debugger tools
+       Although it's never a good idea to use !important 
+       and always go by the rules of css
+       to  write clean codes*/
+}
+
+.highlighted {
+    border: 2px solid #fa923f;
+    height: 200px;
+}

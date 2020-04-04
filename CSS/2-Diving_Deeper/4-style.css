@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+
+#product-overview {
+    background: #be2a4f;
+    width: 100%;
+    /*OR
+    width: 300px;
+    */
+    height: 528px;
+    padding: 10px;
+
+}
+
+.section-title {
+    color: rgb(46, 197, 53);
+    font-family: inherit;
+}
+
+/* Combining things*/
+#product-overview h1 {
+    color: azure;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+h1 {
+    font-family: serif;
+}
+*/
+
+.main-header {
+    width: 100%;
+    background: #2ddf5c;
+    padding: 8px 16px;
+
+}
+
+.main-header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-header__brand {
+    color: #0e4f1f;
+    text-decoration: none;  /* It is to Remove Underlining in the text-links
+                                Which is present by defualt*/
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.main-nav { 
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 72px);
+    /* Calc is a css function used to calculate simple mathematics*/
+    vertical-align: middle;
+}
+
+.main-nav__item {
+    margin: 0;
+    padding: 0;
+    list-style: none;   /* this is to ensure that there are no bullets in list
+                            So that there will be no extra spacing for the bullets*/
+    
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 16px;
+    text-decoration: none;
+    
+}
+
+/* If you want to make some changes to the anchor tags like removing underline or anything
+    This won't work if you define them in .main-nav__item as by default 
+    anchor tag inherits underline by the browser itself.
+    So we have to got two options to do so: 
+    1. To define a class in every anchor tag - which is not a good idea but will be fast
+    2. To use combinator like used below*/
+.main-nav__item a {
+    text-decoration: none;
+    color: #0e4f1f;
+    
+}

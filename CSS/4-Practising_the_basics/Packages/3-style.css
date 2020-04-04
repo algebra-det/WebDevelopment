@@ -1,0 +1,99 @@
+/* To fix the hover effect on the free_package, that is , there will be no
+red border as defined in hover, the left-border will not be effected with hover
+Because of specifity:
+Check it in the developer's tool of the browser:
+You will come to see that:
+
+the #free has border-left has the highest specifity in the #free id
+and the hover have low specifity
+ID selectors has the higher specifity than class selectors or pseudo-selectors
+This hover for the left-border can be fixed by:
+
+1. defining hover over the #free:hover and #free:active
+2. By declaring !important in the .package:hover in border-color, so that
+    It will have highest specifity, i.e. !important always WINS
+    Using !important is a bad practise, If you use too much !important than
+    your code becomes unreadable and you break the concept of specifity,
+    So use it in very rare cases, There are some libraries too, which will do the same
+    thing alternatively , but they are also not such good for practise.
+
+    Be Careful to use any of these anything
+
+Both these are just the way to get things sometimes done but do take note in mind
+that these float usage can be destructive to your page and instead of this
+you should use FLEX_BOX*/
+
+
+main {
+    padding-top: 32px;
+}
+
+.package {
+    width: 80%;
+    margin: 16px 0;
+    border: 4px solid #0e4f1f;
+    border-left: none;
+}
+
+.package:hover,
+.package:active {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-color: #ff5454 !important;
+    /* Second method to fix the hover issue*/
+}
+
+.package a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 32px;
+}
+
+.package__subtitle {
+    color: #979797;
+
+}
+
+.package__info {
+    padding: 16px;
+    border: 1px solid #0e4f1f;
+    font-size: 20px;
+    color: #0e4f1f;
+    background: white;
+}
+
+#plus {
+    background: rgba(213, 255, 220, 0.95);
+}
+
+#free {
+    background: rgba(234, 252, 237, 0.95);
+    float: right;
+    border-right: none;
+    border-left: 4px solid #0e4f1f;
+}
+
+/* First method to fix this hover issue: 
+
+#free:hover,
+#free:active {
+    border-left-color: #ff5454;
+}
+
+*/
+
+.clearfix {
+    clear: both;
+}
+
+#premium {
+    background: rgba(14, 79, 31, 0.95);
+}
+
+#premium .package__title {
+    color: white;
+}
+
+#premium .package__subtitle {
+    color: #bbb;
+}

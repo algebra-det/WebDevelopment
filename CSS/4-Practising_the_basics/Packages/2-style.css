@@ -1,0 +1,96 @@
+/* Making the use of float: "position" for the free_plan, and making it to be 
+on the right side of the page
+NOTE: Float means you overwrite default positioning and tell the browser to 
+push the element to the left or right of the page. As left is already the case
+but you can make the element to break from the document flow,
+This is why we don't use float that much (used seldomly),
+there are better technologies out there which we can use in css
+These are " FLEX BOX " .
+
+float can be used when we want some content or images to float around and that's
+too not in every case
+
+Try the below #free style*/
+
+main {
+    padding-top: 32px;
+}
+
+.package {
+    width: 80%;
+    margin: 16px 0;
+    border: 4px solid #0e4f1f;
+    border-left: none;
+}
+
+.package:hover,
+.package:active {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-color: #ff5454;
+}
+
+.package a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 32px;
+}
+
+.package__subtitle {
+    color: #979797;
+
+}
+
+.package__info {
+    padding: 16px;
+    border: 1px solid #0e4f1f;
+    font-size: 20px;
+    color: #0e4f1f;
+    background: white;
+}
+
+#plus {
+    background: rgba(213, 255, 220, 0.95);
+}
+
+/* Take a look at the below code by uncommenting it, it shows that if we
+use the float:right than it will break the document flow and mess with the other
+elements:
+
+#free {
+    background: rgba(234, 252,237, 0.95);
+    float: right;
+}
+
+That's why, in the html code you will find a <div> with class "clearfix" tag created after the "free_plan_section"
+which will be used to tell the other elements of the css to not interfere , or 
+to not take any float inherent from the float element i.e. free
+*/
+
+#free {
+    background: rgba(234, 252, 237, 0.95);
+    float: right;
+    border-right: none;
+    border-left: 4px solid #0e4f1f;
+}
+
+/* below we used clear: both; which means clear elements from both sides,
+this means any elements coming after this clear fix class will not respect previous flows*/
+.clearfix {
+    clear: both;
+}
+
+/* Take note that the hover effect won't be aplied to this left-border
+and to know why and how to fix this check out the 3-fixing_hover_effect.html & 3-style.css*/
+
+#premium {
+    background: rgba(14, 79, 31, 0.95);
+}
+
+#premium .package__title {
+    color: white;
+}
+
+#premium .package__subtitle {
+    color: #bbb;
+}

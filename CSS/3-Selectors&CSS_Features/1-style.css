@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    margin-bottom: 16px;
+    background: #fa923f;
+    padding: 8px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+/* Look it's not a combinator , we are using anchor.(class_name)
+    In our case a.active , a is the anchor tag and active is class_name
+    Here below it means, a class direct inherent by the anchor tag , 
+    Here active is not an pseudo-element as you can check int the html file
+    We can also use a#id_name if there is some id defined in the anchor tag*/
+a.active {
+    color: #527751;
+}
+
+/* If we define the highlighted class here than it will not win
+    Hence won't be implemented, 
+    here means first i.e. before the main section:
+
+.highlighted {
+    border-color: #fa923f;
+    border-width: 2px;
+    border-style: solid;
+}
+*/
+.main-section {
+    height: 800px;
+    border: 1px solid #ccc;
+    padding: 16px;
+}
+
+/*We have to define the class below the main section to make it happen
+    So it's not of any care to define the class in any perticular order in the 
+    html file
+    but it's the order in the stylesheet file which will do the stuff*/
+.highlighted {
+    border-color: #fa923f;
+    border-width: 2px;
+    border-style: solid;
+}

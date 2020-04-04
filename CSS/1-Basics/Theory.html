@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Combinators</title>
+    <style>
+        /*Adjacent sibling, here, assign the style to the "p" tag that directly
+        follows the "h2" tag (this will not be assigned to h2, but only to p
+        Here, the second element comes "IMMEDIATELY" after the first element*/
+        h2 + p {
+            color: red;
+        }
+
+        /*General Sibling, here, assign the style to the "p" tag thhat are at 
+        the same level as the "h4" tag, irrespective of the "p" tag coming after the "h4" tag
+        Here,  the second element comes after the first element (i.e. not immediately)*/
+        h4 ~ p {
+            color: teal;
+        }
+
+        /*Child Combinator, here, Any paragraph that have a direct child of the div should get div style
+        Here, Secondn element is a direct child of first element*/
+        .Child_combinator > p {
+            color: violet;
+        }
+
+        /*Descendent Combinator
+        Here, Second element is a descendant of the first element*/
+        .Descendent_combinator p {
+            color: yellowgreen;
+        }
+
+        /* Most Used Combinator is the Descendant Combinator
+        Which will be used most of the time in CSS*/
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="Adjacent_sibling">
+        <h2>Not Appleid</h2>
+        <p>Css applied</p>
+        <h2>Not applied</h2>
+        <h3>not applied</h3>
+        <p>Not applied</p>
+        <h2>Not applied</h2>
+        <p>CSS applied</p>
+    </div>
+    <br>
+    <div class="General_sibling">
+        <h4>Not applied</h4>
+        <p>CSS applied</p>
+        <h4>Not applied</h4>
+        <h5>Not applied</h5>
+        <p>CSS applied</p>
+    </div>
+    <br>
+    <div class="Child_combinator">
+        <div>Not Applied</div>
+        <p>CSS applied</p>
+        <div>Not applied</div>
+        <article>
+            <p>Not Applied</p>
+        </article>
+        <p>CSS applied</p>
+    </div>
+    <br>
+    <div class="Descendent_combinator">
+        <div>Not Applied</div>
+        <p>CSS applied</p>
+        <div>Not applied</div>
+        <article>
+            <p>CSS applied</p>
+        </article>
+        <p>CSS applied</p>
+    </div>
+</body>
