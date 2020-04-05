@@ -1,0 +1,52 @@
+/* There's a Postition property that is already seted for the html document
+So that their will be a Document flow of the page i.e. top to bottom
+The first element will be displayed first, than the second element, and then so on
+So there is a "POSITION PROPERTY" by default which is "STATIC" , which means document flow
+
+position: static  -  Default      -   for document flow top to bottom
+we can change this to "relative, absolute, fixed, sticky", etc to change the flow or in simple words
+make somewhat better looking page like making, Recomended TAGS on plans at the cornor, etc
+
+After defining not static , we have to tell where do we want to place it in the page
+with top, bottom, right, left - Properties in the document flow.
+*/
+
+
+html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+body {
+    background: #fa923f;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+  }
+  
+.parent {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+  }
+  
+.parent div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.parent .child-1 {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

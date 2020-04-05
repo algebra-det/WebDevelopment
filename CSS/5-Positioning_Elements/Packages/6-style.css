@@ -1,0 +1,125 @@
+/* Adding the Badge to the package by using position element BY :
+Adding another h2 tag in the html file with class package__badge
+we used .package__badge with :
+position: absolute
+what abolute actually does is that it positions the element to desired location
+with top, left . 
+BUT also it will not be fixed as we scroll down, and HENCE it will be scrolled
+like a regular page.
+
+We also have to try using position in the .package, try doing absolute in it.
+When it's absolute, all the package will assemble into one
+So we have to make it RELATIVE, relative positioning doesn't take our elements out of the document flow
+YOU WILL LEARN MORE ABOUT THE FIXED POSITIONIG IN THE NEXT CODE
+
+Both Fixed & Absolute take the element out of the document flow, the differnce is that
+
+FIXED value the positioning context is always the viewport 
+
+ABSOLUTE value the positioning context depends, 
+        If you don't have any ancestor with the positioning property applied than the 
+                positioning context is HTML element, means it will be floating irrespective of
+                any element on the page at the desired location defined by top, bottom, left, right.
+                Absolute elements get scrolled unlike Fixed elemnts.
+
+        If you have ancestor than the closes ancestor which has the positioning property applied
+        is the CONTEXT for this absolute element, Means the closest ancestor's box will be it's context
+        So it will position itself inside the Closest Ancestor's Context which has the Postioning
+        which is the case in our situation
+    
+    If the Ancestor's position is Absolute than It may crash the whole package elements, As all the
+    packages will be onto each other, Try doing position to absolute in .package
+    
+    That's why we have also defined the position relative in the .package position (i.e. Ancestor element for the h2 absolute element "RECOMMENDED" )
+
+We have defined top:0; & right:0; in the .package__badge because as we have defined relative-position in the 
+.package, than the top will be used as of the ancestor PLus_package
+*/
+
+main {
+    padding-top: 32px;
+}
+
+.background {
+    background: url("plans-background.jpg");
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    /* We are stating z-index to -1 as the default for all is 0, 
+    than it will be behind every default element*/
+
+}
+
+.package {
+    width: 80%;
+    margin: 16px 0;
+    border: 4px solid #0e4f1f;
+    border-left: none;
+    position: relative;
+}
+
+.package:hover,
+.package:active {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-color: #ff5454 !important;
+    /* Second method to fix the hover issue*/
+}
+
+.package a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 32px;
+}
+
+.package__badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    font-size: 12px;
+    color: white;
+    background: #ff5454;
+    padding: 8px;
+}
+
+.package__subtitle {
+    color: #979797;
+
+}
+
+.package__info {
+    padding: 16px;
+    border: 1px solid #0e4f1f;
+    font-size: 20px;
+    color: #0e4f1f;
+    background: white;
+}
+
+#plus {
+    background: rgba(213, 255, 220, 0.95);
+}
+
+#free {
+    background: rgba(234, 252, 237, 0.95);
+    float: right;
+    border-right: none;
+    border-left: 4px solid #0e4f1f;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#premium {
+    background: rgba(14, 79, 31, 0.95);
+}
+
+#premium .package__title {
+    color: white;
+}
+
+#premium .package__subtitle {
+    color: #bbb;
+}

@@ -1,0 +1,121 @@
+/* Here we will fix the main-header by position fixed, it will work on the go
+unlike the previous 1-Introduction.html, where we have to define top, left.
+That is because there was a html-styling with margin
+If we have the same html-styling in this page than we gotta define the top, left
+again in this page, but as there isn't, we can rest assure*/
+
+* {
+    box-sizing: border-box;
+}
+
+/*
+html {
+    margin: 30px;
+}
+*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+/*TO have the navigation bar at the top index/always visible, we have to define
+it's z-index as in packages page, the background image have been assigned a z-index
+We should take care of the z-indexes time to time when we change other's z-indexes
+OR we can define the z-index of 100, so that the main-nav will always be at the top index*/
+
+.main-header {
+    width: 100%;
+    position: fixed;
+    background: #2ddf5c;
+    padding: 8px 16px;
+    z-index: 1;
+}
+
+.main-header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-header__brand {
+    color: #0e4f1f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.main-nav {
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 74px);
+    vertical-align: middle;
+}
+
+.main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+    color: white;
+    border-bottom: 5px solid white;
+}
+
+.main-nav__item--cta a {
+    color: white;
+    background: #ff1b68;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+    color: #ff1b68;
+    background: white;
+    border: none;
+}
+
+.main-footer {
+    background: #000000;
+    color: white;       /* This won't take action because the browser makes it 
+    To inherit from other specifity class like " color: -webikt-link; " */
+    padding: 32px;
+    margin-top: 48px;
+}
+
+.main-footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.main-footer__link {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.main-footer__link a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.main-footer a:hover,
+.main-footer a:active {
+    color: #ccc;
+}
