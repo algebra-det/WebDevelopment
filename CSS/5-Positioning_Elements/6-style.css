@@ -1,0 +1,70 @@
+/* We will learn about sticky-positioning :
+  check it out in the .parent .country by 
+      "position: sticky" and "top: 20px" 
+
+  See how the countires that are in orange will stick to and till the end of
+  it's parent context.
+  In Our Case as soon as the country element gets 20px from the border(viewbort) it will start to stick
+
+  SO,
+
+  If there's no "top" than it will act like a "relative".
+  and as soon as we define "top" it will act as a "fixed" element
+    as soon as we reach a certain border from the viewport defined in " top: (px); "
+
+    Check this out by defining top:0; , you will see that when our sticky
+    element gets at 0px with the viewport than it will behave as "fixed"
+
+  Sticky is just a Hybrid or a Combination of "relative" and "fixed"
+
+  So basically we define the distance between the sticky element and the viewport 
+  by "top" attribute.
+
+  There's also an intersting behaviour of this sticky-element, that
+  as soon as it reaches the end of it's parent's content, it will stop
+  being fixed.
+
+  STICKY WORKS WITH THE DISTANCE BETWEEN ITSELF-ELEMENT AND THE VIEWPORT
+
+  Sticky is quite new in the stylesheet, And hence browser support is less
+*/
+
+html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+body {
+    background: #a89e96;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+  }
+  
+.parent {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+  }
+
+.parent .country {
+    background: #fa923f;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    position: sticky;
+    top: 20px;
+}
+  
+.parent .cities {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}

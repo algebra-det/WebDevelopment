@@ -1,0 +1,66 @@
+/*
+As stated there is one issue though with this
+
+i.e. IF the parent is the body element of the relative-positioned child
+than it will only take effect iff we define overflow in <html> as well as <body> tag.
+
+It's that if we define the relative position in any parent class which is the direct child of the <body>
+tag than it will simply won't take effect, because 
+There is a predefined structure of css
+That if we define in the <body> "overflow:hidden;" than it will directly go to 
+it's parent i.e. <html> tag and will get rid of this "overflow" from itself and place
+it in the html tag
+
+For example, in our code :    
+    in .parent we defined "position:relative" and "top:200px" 
+    and in body "overflow:hidden" 
+
+    When we define overflow in body it will go to html
+    So our new code will automatically be :
+    body will remove overflow from it
+    and html will add this overflow to itself
+
+So, To overcome this issue too, we have to define by ourself the 
+    overflow to the html as well as body tag
+
+    HENCE, the content will not be displayed outside of the parent
+    ( i.e. body-Parent & .parent-Child 
+
+So In short, if the parent is the body element
+*/
+
+
+
+html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+    overflow: hidden;
+}
+
+body {
+    background: #fa923f;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+.parent {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+    top: 200px;
+  }
+  
+.parent div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}

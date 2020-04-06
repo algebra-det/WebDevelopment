@@ -1,0 +1,117 @@
+/* Here we will get to know the Stacking_Context, 
+    when we make all the parent classes fixed i.e. .navigation, .headline, .contact-us
+    
+    AND define the z-index of "contact-us" at the top i.e. 100
+    So it will be at the top of the navigation and headline as their default
+    z-index is 0.
+
+    Hence the "contact-us" has the highest index - 100
+
+    Now, in the "headline" class, it have three child elements i.e.
+    image-1, image-2 & image-3
+
+    If we define the z-index of "image-2" to 1000, 
+    It will still be places below the "contact-us" class despite of being 1000 
+    as compared to 100 of "contact-us".
+
+    The 1000 z-index of the image-2 is only classified for it's parent class elements
+    Hence it's highest only among it's siblings i.e. image-1 & image-3
+
+    In other words the image-2 is indexed in part of the stacking context of the
+    headline class(i.e. parent of image-2 )
+
+    This is because of Stacking Context,
+    We aligned all of the parent elements along the z-axis, aand by adding fixed-positioning
+    each element has it's own stacking context
+
+    Try z-index:100 in "headline" too, than the whole
+
+    NOTE :-
+
+    THE DEFAULT DOCUMENT FLOW/INDEX FOR EVERY ELEMENT IS 0, SO IF WE REMOVE Z-INDEX FROM EVERY CLASS
+    THAN THE EARLIER DEFINED TAG WILL BE THE LOWEST (IN TERM OF DOCUMENT-FLOW/INDEX/VISIBILITY) AND
+    THE LATER DEFINED WILL THE HIGHEST, SO THERE WILL BE A HEIRARCHY.
+
+    SO 
+    1. "NAVIGATION" IS DEFINED 1ST, SO IT WILL BE PLACED THE LOWEST
+    2. "HEADLINE IS" DEFINED 2ND, SO IT WILL BE ON TOP OF "NAVIGATION"
+    3. "CONTACT-US" IS DEFINED 3RD, SO IT WILL ON TOP OF "HEADLINE"
+
+
+*/
+
+
+html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+body {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+    height: 400px;
+}
+  
+.navigation, .headline, .contact-us {
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+    position: fixed;
+}
+  
+.headline div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 130px;
+}
+
+.navigation {
+    background: rgb(255, 109, 109);
+    top: 100px;
+    left: 100px;
+    width: 300px;
+}
+
+.headline {
+    background: rgb(77, 77, 248);
+    top: 150px;
+    left: 150px;
+    width: 270px;
+    height: 200px;
+    z-index: 1;
+}
+
+.contact-us {
+    background: rgb(69, 214, 69);
+    top: 180px;
+    left: 320px;
+    width: 180px;
+    z-index: 100;
+}
+
+.image-1 {
+    top: 200px;
+    left: 230px; 
+    position: fixed;
+}
+
+.image-2 {
+    top: 230px;
+    left: 260px;
+    position: fixed;
+    z-index: 1000;
+}
+
+.image-3 {
+    left: 300px;
+    top: 260px;
+    position: fixed;
+}
